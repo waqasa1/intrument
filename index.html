@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>NAME's soundboard</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
+    <link rel="stylesheet" href="assets/css/hexagons.min.css">
+
+    <style>
+     button{
+       width: 150px;
+       height: 150px;
+       border-radius: 10px;
+       background-color:transparent;
+       border: 0px;
+       transition:1.2s ease-in-out;
+     }
+     button:hover{
+       transform: rotate(180deg);
+     }
+     .hb{
+       color: #ed4b4d;
+       font-size: 16px;
+       background-color:aqua;
+       border:0px;
+     }
+     .hb:hover{
+       color:#abcdef;
+       border-color:#abcdef;
+     }
+     .soundboard{
+       display: flex;
+       flex-direction:column;
+     }
+
+     .row{
+      flex-direction:row;
+     }
+    </style>
+  </head>
+
+  <body>
+
+    
+
+    <!-- Audio elements go here! -->
+    <audio id="harp">
+      <source src="./sounds/harp.wav" type="audio/wav">
+      Hi your browser doesnt support audio files
+    </audio>
+    <audio id="bass-drum">
+      <source src="./sounds/bass-drum.wav" type="audio/wav">
+      Hi your browser doesnt support audio files
+    </audio>
+    <h1>WAQAS SOUNDBOARD</h1>
+
+    <!-- Create the soundboard buttons -->
+    <div class="soundboard">
+    <div class="row">
+    <button onclick="toggleAudio('harp', 0)">
+    <span class="hb hb-md">Harp</span></button>
+    <button onclick="toggleAudio('bass-drum', 0)">
+    <span class="hb hb-md">Bass-Drum</span></button>
+    <button onclick="toggleAudio('bass-drum', 0)">
+    <span class="hb hb-md">Bass-Drum</span></button>
+    </div>
+    <div class"row">
+    <button onclick="toggleAudio('bass-drum', 0)">
+    <span class="hb hb-md">Bass-Drum</span></button>
+    <button onclick="toggleAudio('bass-drum', 0)">
+    <span class="hb hb-md">Bass-Drum</span></button>
+    <button onclick="toggleAudio('bass-drum', 0)">
+    <span class="hb hb-md">Bass-Drum</span></button>
+    </div>
+    <div class="row">
+    <button onclick="toggleAudio('bass-drum', 0)">
+    <span class="hb hb-md">Bass-Drum</span></button>
+    <button onclick="toggleAudio('bass-drum', 0)">
+    <span class="hb hb-md">Bass-Drum</span></button>
+    <button onclick="toggleAudio('bass-drum', 0)">
+    <span class="hb hb-md">Bass-Drum</span></button>
+    </div>
+    </div>
+
+
+    <script>
+      // Create the playing boolean list
+
+      function toggleAudio(sound, number) {
+        var audio = document.getElementById(sound);
+        audio.play();
+        console.log("Audio toggled")
+      }
+    </script>
+
+  </body>
+</html>
